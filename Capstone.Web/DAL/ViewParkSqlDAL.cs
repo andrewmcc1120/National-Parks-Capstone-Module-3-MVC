@@ -70,11 +70,49 @@ namespace Capstone.Web.DAL
 		/// <summary>
 		/// Gets a single park from the NPGeek DB
 		/// </summary>
-		/// <param name="ParkCode"></param>
+		/// <param name="Name"></param>
 		/// <returns></returns>
 		public Parks GetPark(string ParkCode)
 		{
-			return GetParks().FirstOrDefault(p => p.ParkCode == ParkCode);
+			Parks park = new Parks();
+
+			try
+			{
+				using (SqlConnection conn = new SqlConnection(connectionString))
+				{
+					conn.Open();
+
+					string sql = $"SELECT * FROM park WHERE park.parkCode = @ParkCode";
+					SqlCommand cmd = new SqlCommand(sql, conn);
+					cmd.Parameters.AddWithValue("@ParkCode", ParkCode);
+					SqlDataReader reader = cmd.ExecuteReader();
+
+					while (reader.Read())
+					{
+						park.ParkCode = Convert.ToString(reader["parkCode"]);
+						park.Name = Convert.ToString(reader["parkName"]);
+						park.State = Convert.ToString(reader["state"]);
+						park.Acreage = Convert.ToInt32(reader["acreage"]);
+						park.Elevation = Convert.ToInt32(reader["elevationInFeet"]);
+						park.MilesOfTrails = Convert.ToInt32(reader["milesOfTrail"]);
+						park.NumberOfCampsites = Convert.ToInt32(reader["numberOfCampsites"]);
+						park.Climate = Convert.ToString(reader["climate"]);
+						park.YearFounded = Convert.ToInt32(reader["yearFounded"]);
+						park.AnnualVisitors = Convert.ToInt32(reader["annualVisitorCount"]);
+						park.Quote = Convert.ToString(reader["inspirationalQuote"]);
+						park.QuoteSource = Convert.ToString(reader["inspirationalQuoteSource"]);
+						park.Description = Convert.ToString(reader["parkDescription"]);
+						park.EntryFee = Convert.ToDecimal(reader["entryFee"]);
+						park.NumberOfSpecies = Convert.ToInt32(reader["numberOfAnimalSpecies"]);
+					}
+				}
+			}
+			catch(SqlException)
+			{
+				throw;
+			}
+
+			return park;
 		}
 	}
 }

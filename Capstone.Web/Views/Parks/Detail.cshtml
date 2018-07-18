@@ -1,0 +1,13 @@
+﻿@model Parks
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<body>
+    <div class="container-fluid">
+        <div id="detail">
+            <h1 id="detail-title">@Model.Name</h1>
+            <img src="~/images/@(Model.ParkCode).jpg" class="col-md-6"/>
+        </div>
+    </div>
+</body>
