@@ -5,15 +5,16 @@ using System.Threading.Tasks;
 
 namespace Capstone.Web.DAL
 {
-    public class SurveySqlDAL
-    {
-        private readonly string connectionString;
+	public class SurveySqlDAL
+	{
+		private readonly string connectionString;
 
-        public SurveySqlDAL(string connectionString)
-        {
-            this.connectionString = connectionString;
-        }
+		public SurveySqlDAL(string connectionString)
+		{
+			this.connectionString = connectionString;
+		}
 
-        public List<Survey> 
-    }
+		//    public List<Survey> 
+		//}
+	}
 }

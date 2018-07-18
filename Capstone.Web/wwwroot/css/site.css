@@ -3,6 +3,7 @@ for details on configuring this project to bundle and minify static web assets. 
 body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background-color: rgb(33, 33, 33);
 }
 
 /* Wrapping element */
@@ -39,7 +40,7 @@ body {
 /*header section start*/
 .header {
     height: 95vh;
-    background-image: linear-gradient( to right bottom, rgba(70, 40, 182, 0.8), rgba(21, 119, 119, 0.8)), url(https://images-na.ssl-images-amazon.com/images/I/91pgZyHcR2L._SL1500_.jpg);
+    background-image: linear-gradient( to right bottom, rgba(70, 40, 182, 0.8), rgba(21, 119, 119, 0.8)), url(https://cdn-image.travelandleisure.com/sites/default/files/styles/1600x1000/public/1491233384/yosemite-national-park-california-PARKWEEK0417.jpg?itok=NpXBdOnl);
     background-size: cover;
     background-position: top;
     position: relative;
@@ -125,3 +126,6 @@ body {
 
 /*header section end*/
 
+.container-fluid {
+    color: white;
+}
