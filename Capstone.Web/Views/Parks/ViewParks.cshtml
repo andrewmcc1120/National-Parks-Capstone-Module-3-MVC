@@ -1,0 +1,22 @@
+﻿@model List<Parks>
+@{
+    ViewData["Title"] = "ViewParks";
+}
+
+<h2>view parks</h2>
+<table>
+    <tbody>
+        @foreach (var park in Model)
+        {
+            <tr>
+                <td>
+                    <a asp-controller="park" asp-action="detail" asp-route-id="@park.ParkCode">
+                        <img src="~/images/@(park.ParkCode).jpg" />
+                    </a>
+                    <p>@park.Name</p>
+                    <p>@park.Description</p>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
