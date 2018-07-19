@@ -4,13 +4,13 @@
 }
 <div class="container-fluid">
     <h1 class="heading-primary"><span class="heading-primary-main">All Parks</span></h1>
-    <div class="column">
-        <div class="row">
+    <div>
+        <div>
             @foreach (var park in Model.Parks)
             {              
-                        <div class="photo">
+                        <div>
                                 <a asp-controller="Parks" asp-action="detail" asp-route-id="@park.ParkCode">
-                                    <img src="~/images/@(park.ParkCode).jpg" />
+                                    <img class="photo img-responsive img-circle" src="~/images/@(park.ParkCode).jpg" />
                                 </a>
                         </div>
                     <h3><strong>@park.Name</strong></h3>

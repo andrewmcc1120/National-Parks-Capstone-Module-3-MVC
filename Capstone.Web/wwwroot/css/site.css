@@ -37,6 +37,11 @@ body {
     }
 }
 
+
+.container-fluid {
+    color: rgba(195, 175, 115, 0.70);
+}
+
 /*header section start*/
 .header {
     height: 95vh;
@@ -55,7 +60,6 @@ body {
 }
 
 .heading-primary {
-    color: #fff;
     text-transform: uppercase;
     backface-visibility: hidden;
     margin-bottom: 60px;
@@ -126,8 +130,30 @@ body {
 
 /*header section end*/
 
-.container-fluid {
-    color: white;
+
+/*viewparks section start*/
+.photo {
+    display: inline;
+    transition: transform .3s;
+}
+
+.photo:hover {
+    transform: scale(1.05);
+}
+/*viewparks section ends*/
+
+
+/*details view section starts*/
+#quote {
+    margin-top: 25px;
+    font-size: 15px;
+    display: block;
+}
+
+#description {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 15px;
 }
 
 .col-lg-11 {
@@ -136,17 +162,7 @@ body {
     clear: both;
 }
 
-#quote {
-    margin-top: 40px;
-    font-size: 15px;
+.col-md-6 {
+    padding-left : 95px;
 }
-
-.photo {
-    display: block;
-    clear: both;
-    transition: transform .3s;
-}
-
-.photo:hover {
-    transform: scale(1.05);
-}
+/*details view section ends*/
