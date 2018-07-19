@@ -135,15 +135,17 @@ body {
 .photo {
     display: inline;
     transition: transform .3s;
+    filter: grayscale(75%);
 }
 
 .photo:hover {
     transform: scale(1.05);
+    filter: grayscale(0%);
 }
 /*viewparks section ends*/
 
 
-/*details view section starts*/
+/*detail section starts*/
 #quote {
     margin-top: 25px;
     font-size: 15px;
@@ -165,4 +167,4 @@ body {
 .col-md-6 {
     padding-left : 95px;
 }
-/*details view section ends*/
+/*detail section ends*/
