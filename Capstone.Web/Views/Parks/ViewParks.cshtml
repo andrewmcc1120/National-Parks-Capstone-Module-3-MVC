@@ -3,21 +3,19 @@
     ViewData["Title"] = "ViewParks";
 }
 <div class="container-fluid">
-    <h1>view parks</h1>
-    <table>
-        <tbody>
+    <h1 class="heading-primary"><span class="heading-primary-main">All Parks</span></h1>
+    <div class="column">
+        <div class="row">
             @foreach (var park in Model.Parks)
-            {
-                <tr>
-                    <td>
-                        <a asp-controller="Parks" asp-action="detail" asp-route-id="@park.ParkCode">
-                            <img src="~/images/@(park.ParkCode).jpg" />
-                        </a>
-                        <h3><strong>@park.Name</strong></h3>
-                        <p>@park.Description</p>
-                    </td>
-                </tr>
+            {              
+                        <div class="photo">
+                                <a asp-controller="Parks" asp-action="detail" asp-route-id="@park.ParkCode">
+                                    <img src="~/images/@(park.ParkCode).jpg" />
+                                </a>
+                        </div>
+                    <h3><strong>@park.Name</strong></h3>
+                    <p>@park.Description</p>
             }
-        </tbody>
-    </table>
+        </div>
+    </div>
 </div>
