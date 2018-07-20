@@ -175,6 +175,7 @@ body {
 #detail-list {
     font-size: 20px;
     padding-left: 35px;
+    padding-top: 25px;
 }
 #map {
     display: inline-block;
