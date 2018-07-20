@@ -22,6 +22,5 @@ namespace Capstone.Web.Models
         public string Description { get; set; }
         public decimal EntryFee { get; set; }
         public int NumberOfSpecies { get; set; }
-        public int SurveyCount { get; set; }
     }
 }
