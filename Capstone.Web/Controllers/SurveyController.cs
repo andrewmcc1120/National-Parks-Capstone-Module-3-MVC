@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Capstone.Web.DAL;
+using Capstone.Web.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Capstone.Web.Controllers
@@ -17,10 +18,22 @@ namespace Capstone.Web.Controllers
             return View(surveys);
         }
         
-
+        [HttpGet]
         public IActionResult Survey()
         {
+            
+            return View();
+        }
 
+        [HttpPost]
+        public IActionResult Favorites (Survey survey)
+        {
+            if (ModelState.IsValid)
+            {
+                dal.SaveSurvey(survey);
+                //return RedirectToAction("Favorites");
+                return View(survey);
+            }
 
             return View();
         }
