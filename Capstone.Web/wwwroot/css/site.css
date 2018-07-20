@@ -174,9 +174,10 @@ body {
 
 #detail-list {
     font-size: 20px;
+    padding-left: 35px;
 }
 #map {
     display: inline-block;
-    padding-left: 100px;
+    padding-left: 240px;
 }
 /*detail section ends*/
