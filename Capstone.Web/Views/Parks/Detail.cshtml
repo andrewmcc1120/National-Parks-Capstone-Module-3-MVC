@@ -31,7 +31,48 @@
                 <h3>@Model.AnnualVisitors visitors per year</h3>
                 <h3>@Model.NumberOfSpecies different species to discover</h3>
                 <h3>@Model.EntryFee.ToString("C") to get in</h3>
+                <br />
             </div>
+            @if (Model.Name == "Yosemite National Park")
+            {
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d855504.0640443224!2d-120.11381300133415!3d37.76070946088418!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8096f09df58aecc5%3A0x2d249c2ced8003fe!2sYosemite+National+Park!5e0!3m2!1sen!2sus!4v1532096116729" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+            }
+            else if (Model.Name == "Yellowstone National Park")
+            {
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d727453.6772895041!2d-111.07452245866457!3d44.58442465862721!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5351e55555555555%3A0xaca8f930348fe1bb!2sYellowstone+National+Park!5e0!3m2!1sen!2sus!4v1532096413036" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+            }
+            else if (Model.Name == "Rocky Mountain National Park")
+            {
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d389201.5592435785!2d-105.95667461471754!3d40.35039388738717!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876979e4455903e9%3A0xfa27ee43a78e8217!2sRocky+Mountain+National+Park!5e0!3m2!1sen!2sus!4v1532096648357" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+            }
+            else if (Model.Name == "Mount Rainier National Park")
+            {
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d349207.4621272165!2d-121.99511429728673!3d46.85976511955594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5490cde6eec94b87%3A0x5cf4a1fb4f91a418!2sMount+Rainier+National+Park!5e0!3m2!1sen!2sus!4v1532096736484" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+            }
+            else if (Model.Name == "Grand Teton National Park")
+            {
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d368555.34927994135!2d-110.968707445196!3d43.807334188730884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5352519ec95d1ba9%3A0xa5a0b88ecc91a337!2sGrand+Teton+National+Park!5e0!3m2!1sen!2sus!4v1532096810886" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+            }
+            else if (Model.Name == "Great Smoky Mountains National Park")
+            {
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d415347.7071323032!2d-83.81147853459309!3d35.58076217778525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x885e986b88fb1815%3A0x3c926fc1a7752461!2sGreat+Smoky+Mountains+National+Park!5e0!3m2!1sen!2sus!4v1532096886290" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+            }
+            else if (Model.Name == "Glacier National Park")
+            {
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d674673.1474320606!2d-114.406305940027!3d48.65878940030032!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5368901555555555%3A0xaf16bc2215c55dec!2sGlacier+National+Park!5e0!3m2!1sen!2sus!4v1532096946842" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+            }
+            else if (Model.Name == "Grand Canyon National Park")
+            {
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d825369.031362653!2d-113.40362574859743!3d36.09110442575191!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x873312ae759b4d15%3A0x1f38a9bec9912029!2sGrand+Canyon+National+Park!5e0!3m2!1sen!2sus!4v1532097029205" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+            }
+            else if (Model.Name == "Everglades National Park")
+            {
+                <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d921311.9229452547!2d-81.4849086904689!3d25.57583516994712!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1severglades+national+park!5e0!3m2!1sen!2sus!4v1532097164247" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+            }
+            else
+            {
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d88769.18068963817!2d-81.58706687231576!3d41.26506555881934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8830de482229f575%3A0xcac9be4a7c9ee5aa!2sCuyahoga+Valley+National+Park!5e0!3m2!1sen!2sus!4v1532097258042" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+            }
         </div>
     </div>
 </body>
