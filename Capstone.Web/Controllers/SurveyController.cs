@@ -16,10 +16,7 @@ namespace Capstone.Web.Controllers
             var surveys = dal.GetSurveys();
             return View(surveys);
         }
-
-
-
-
+        
 
         public IActionResult Survey()
         {

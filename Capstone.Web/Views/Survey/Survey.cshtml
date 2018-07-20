@@ -7,21 +7,32 @@
 
 	<h2>Take Our Survey!</h2>
 
-		<form asp-controller="survey" asp-action="newpost" method="post">
-			<div>
-				<label asp-for="Email"></label>
-				<input asp-for="Email" />
+	<form asp-controller="survey" asp-action="newpost" method="post">
+		<div>
+			<label asp-for="Email"></label>
+			<input asp-for="Email" />
+		</div>
 
-				<label asp-for="Park"></label>
-				<select asp-for="Park" 
+		<div>
+			<label asp-for="Park"></label>
+			<select asp-for="Park" asp-items="Survey.Parks"></select>
+		</div>
+
+		<div>
+			<label asp-for="State"></label>
+			<select asp-for="State" asp-items="Survey.States"></select>
+		</div>
+
+		<div>
+			<label asp-for="Activity"></label>
+			<select asp-for="Activity" asp-items="Survey.ActivityLevel"></select>
+		</div>
+
+		<div class="submit-button">
+			<input type="submit" value="Submit" />
+		</div>
 
 
-
-
-
-
-			</div>
-
-		</form>
+	</form>
 </section>
 

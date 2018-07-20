@@ -26,7 +26,7 @@ namespace Capstone.Web.DAL
                 {
                     conn.Open();
 
-                    string sql = $"select * from survey_result";
+                    string sql = $"select * from survey_result inner join park on park.parkCode = survey_result.parkCode";
                     SqlCommand cmd = new SqlCommand(sql, conn);
                     SqlDataReader reader = cmd.ExecuteReader();
 
