@@ -6,8 +6,32 @@
 <body>
     <div class="container-fluid">
         <div id="detail">
-            <h1 id="detail-title">@Model.Name</h1>
-            <img src="~/images/@(Model.ParkCode).jpg" class="col-md-6"/>
+            <h1 class="heading-primary"><span class="heading-primary-main" style="text-align: center;">@Model.Name</span></h1>
+            <img src="~/images/@(Model.ParkCode).jpg" class="col-lg-12 img-rounded"/>
+            <div class="col-md-5">
+                <blockquote>
+                    <p id="quote"> @Model.Quote <br /><em>~ @Model.QuoteSource</em></p>
+                </blockquote>
+            </div>
+            <div class="col-md-6">
+                <p id="description"> @Model.Description</p>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div id="detail">
+            <div class="flex-container">
+                <h3>Located in @Model.State</h3>
+                <h3>@Model.Acreage acres of pure beauty</h3>
+                <h3>Elevation: @Model.Elevation feet above sea level</h3>
+                <h3>@Model.MilesOfTrails miles of trails to get lost and explore</h3>
+                <h3>@Model.NumberOfCampsites campsites to plan a long stay</h3>
+                <h3>A gorgeous @Model.Climate atmosphere</h3>
+                <h3>Founded in @Model.YearFounded</h3>
+                <h3>@Model.AnnualVisitors visitors per year</h3>
+                <h3>@Model.NumberOfSpecies different species to discover</h3>
+                <h3>@Model.EntryFee.ToString("C") to get in</h3>
+            </div>
         </div>
     </div>
 </body>
