@@ -176,9 +176,17 @@ body {
     font-size: 20px;
     padding-left: 35px;
     padding-top: 25px;
+    padding-bottom:25px;
 }
 #map {
     display: inline-block;
     padding-left: 240px;
 }
+
+
 /*detail section ends*/
+
+/*survey start*/
+#survey {
+    display: block;
+}

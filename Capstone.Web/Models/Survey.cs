@@ -26,7 +26,7 @@ namespace Capstone.Web.Models
             new SelectListItem() {Text = "Mount Rainier National Park", Value = "MRNP"},
             new SelectListItem() {Text = "Rocky Mountain National Park", Value = "RMNP"},
             new SelectListItem() {Text = "Yellowstone National Park", Value = "YNP"},
-            new SelectListItem() {Text = "Yosemite", Value = "YNP"}
+            new SelectListItem() {Text = "Yosemite National Park", Value = "YNP2"}
         };
 
         public static List<SelectListItem> States = new List<SelectListItem>()

@@ -3,36 +3,41 @@
     ViewData["Title"] = "Survey";
 }
 
-<section class="centeredPanel">
 
-	<h2>Take Our Survey!</h2>
+<div class="container-fluid">
+    <h1 class="heading-primary"><span class="heading-primary-main">National Park Survey</span></h1>
 
-	<form asp-controller="Survey" asp-action="Favorites" method="post">
-		<div>
-			<label asp-for="Email"></label>
-			<input asp-for="Email" />
-		</div>
+    <form asp-controller="Survey" asp-action="Favorites" method="post">
+        <div class="table table-striped" id="survey">
+            <div>
+                <label asp-for="Email"></label>
+                <br />
+                <input asp-for="Email" />
+                <br />
+                <br />
+                <label asp-for="Park">What is your favorite park</label>
+                <br />
+                <select asp-for="Park" asp-items="Survey.Parks" style="color: darkslategray;"></select>
+                <br />
+                <br />
+                <label asp-for="State">State of residence</label>
+                <br />
+                <select asp-for="State" asp-items="Survey.States" style="color: darkslategray;"></select>
+                <br />
+                <br />
+                <label asp-for="Activity">Activity level</label>
+                <br />
+                <select asp-for="Activity" asp-items="Survey.ActivityLevel" style="color: darkslategray;"></select>
+                <br />
+                <br />
+            </div>
+        </div>
+            <br />
+        <div class="submit-button">
+            <input type="submit" value="Submit" style="color: darkslategray;"/>
+        </div>
+    </form>
+    <div class="table table-striped" id="posted-survey">
 
-		<div>
-			<label asp-for="Park"></label>
-			<select asp-for="Park" asp-items="Survey.Parks"></select>
-		</div>
-
-		<div>
-			<label asp-for="State"></label>
-			<select asp-for="State" asp-items="Survey.States"></select>
-		</div>
-
-		<div>
-			<label asp-for="Activity"></label>
-			<select asp-for="Activity" asp-items="Survey.ActivityLevel"></select>
-		</div>
-
-		<div class="submit-button">
-			<input type="submit" value="Submit" />
-		</div>
-
-
-	</form>
-</section>
-
+    </div>
+</div>
